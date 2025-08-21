@@ -1,0 +1,13 @@
+<section class="hero">
+  <h2>Neueste Filme & Serien</h2>
+  <div class="hero-list">
+    <div *ngFor="let item of items" class="hero-item">
+      <img
+        [src]="item.poster_path ? 'https://image.tmdb.org/t/p/w500' + item.poster_path : ''"
+        alt="{{ item.title || item.name }}"
+      />
+      <div class="hero-title">{{ item.title || item.name }}</div>
+      <div class="hero-date">{{ item.release_date || item.first_air_date }}</div>
+    </div>
+  </div>
+</section>
