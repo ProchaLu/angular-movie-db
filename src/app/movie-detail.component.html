@@ -1,0 +1,16 @@
+@if (loading) {
+<div class="loading">Lade Filmdaten ...</div>
+} @if (error) {
+<div class="error">Fehler beim Laden der Filmdaten!</div>
+} @if (movie) {
+<section class="movie-detail">
+  <h2>{{ movie.title }}</h2>
+  <img
+    [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : ''"
+    alt="{{ movie.title }}"
+  />
+  <p>{{ movie.overview }}</p>
+  <div><strong>Release:</strong> {{ movie.release_date }}</div>
+  <div><strong>Bewertung:</strong> {{ movie.vote_average }}</div>
+</section>
+}

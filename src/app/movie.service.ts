@@ -13,7 +13,11 @@ export class MovieService {
 
   getLatestMovies(): Observable<any[]> {
     return this.http
-      .get<any>(`${this.baseUrl}/movie/now_playing?api_key=${this.apiKey}&language=en-US&page=1`)
+      .get<any>(`${this.baseUrl}/movie/now_playing?api_key=${this.apiKey}&language=de-DE&page=1`)
       .pipe(map((response) => response.results.slice(0, 20)));
+  }
+
+  getMovieById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/movie/${id}?api_key=${this.apiKey}&language=de-DE`);
   }
 }

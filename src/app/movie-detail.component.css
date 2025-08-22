@@ -1,0 +1,15 @@
+.movie-detail {
+  padding: 2rem;
+  background: #181818;
+  color: #fff;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.movie-detail img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
